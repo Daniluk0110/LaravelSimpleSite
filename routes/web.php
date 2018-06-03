@@ -27,7 +27,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
 
     //admin
     Route::get('/', function (){
-
+      if(view()->exists('admin.index')){
+          $data = ['title' => 'Administration Panel'];
+          return view('admin.index')->with($data);
+      }
     });
 
     //admin/pages
@@ -66,3 +69,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
         Route::match(['get', 'post', 'delete'], '/edit/{services}', ['uses' => 'ServicesController@execute', 'as' => 'servicesEdit']);
     });
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
