@@ -8,11 +8,35 @@ use App\Portfolio;
 use App\Service;
 use App\People;
 use DB;
+use Mail;
 
 class IndexController extends Controller
 {
     public function execute(Request $request){
 
+        if($request->isMethod('post')){
+            $messages = [
+                'required' => 'This :attribute field is required',
+                'email' => 'Wrong email format for field :attribute'
+            ];
+            $this->validate($request, [
+                'name' => 'required|max:255',
+                'email' => 'required|email',
+                'text' => 'required'
+            ], $messages);
+
+            $data = $request->all();
+            $result = Mail::send('site.email', ['data' => $data], function ($message) use ($data){
+                $mail_admin = env('MAIL_ADMIN');
+                $message->from($data['email'], $data['name']);
+                $message->to($mail_admin)->subject('Question');
+            });
+
+            if($result){
+                return redirect()->route('home')->with('status', 'Email is sent');
+            }
+
+        }
         $pages = Page::all();
         $portfolios = Portfolio::all();
         $services = Service::all();
