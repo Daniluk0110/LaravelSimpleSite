@@ -1,6 +1,6 @@
 <div class="wrapper container-fluid">
 
-    {!! Form::open(['url' => '','class'=>'form-horizontal','method'=>'POST','enctype'=>'multipart/form-data']) !!}
+    {!! Form::open(['url' => route('pagesAdd'),'class'=>'form-horizontal','method'=>'POST','enctype'=>'multipart/form-data']) !!}
 
     <div class="form-group">
         {!! Form::label('name','Name:',['class' => 'col-xs-2 control-label'])   !!}
