@@ -21,15 +21,34 @@
      </li>
   </ul>   
   
-  
+  Home Page<br/>
   ![ScreenShot](https://i.imgur.com/wLXQad6.png)
+  
+  About us<br/>
   ![ScreenShot](https://i.imgur.com/zUHUD4r.png)
+  
+  Services
   ![ScreenShot](https://i.imgur.com/l8jjmP6.png)
-  ![ScreenShot](https://i.imgur.com/SFhPO88.png)
-  ![ScreenShot](https://i.imgur.com/mKuek5d.png)
-  ![ScreenShot](https://i.imgur.com/FHaNyYK.png)
+  
+  Portfolio
+  ![ScreenShot](https://i.imgur.com/l8jjmP6.png)
+  
+  Clients
+  ![ScreenShot](https://i.imgur.com/jLKgwVO.png)
+  
+  Team
+  ![ScreenShot](https://i.imgur.com/LizjCgh.png)
+  
+  Contact Us
+  ![ScreenShot](https://i.imgur.com/Fgds2M0.png)
+  
   
   ## Admin Panel
+  All Pages
   ![ScreenShot](https://i.imgur.com/SSn88Ph.png)
+  
+  Add Page
   ![ScreenShot](https://i.imgur.com/ouCuaK0.png)
+  
+  Edit Page
   ![ScreenShot](https://i.imgur.com/JYCSHut.png)
