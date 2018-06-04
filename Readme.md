@@ -1,5 +1,5 @@
 # LaravelWebSite
- This is a simple web site using <i>Laravel</i>. Site has an <i>Admin Panel</i> for data management.
+ This is a simple web site using <i>Laravel</i>. Site also has an <i>Admin Panel</i> for data management.
 
 ## Prerequisits
   Ensure you have PHP version 7.1.*
