@@ -1,10 +1,10 @@
-#LaravelWebSite
+# LaravelWebSite
  This is a simple web site using <i>Laravel</i>. Site has an <i>Admin Panel</i> for data management.
 
-##Prerequisits
+## Prerequisits
   Ensure you have PHP version 7.1.*
   
- ##Running the site
+ ## Running the site
  After you have cloned or downloaded the project, navigate to the corresponding directory
   <ul>
      <li>
