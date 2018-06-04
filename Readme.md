@@ -28,7 +28,7 @@
   ![ScreenShot](https://i.imgur.com/zUHUD4r.png)
   
   Services
-  ![ScreenShot](https://i.imgur.com/l8jjmP6.png)
+  ![ScreenShot](https://i.imgur.com/SFhPO88.png)
   
   Portfolio
   ![ScreenShot](https://i.imgur.com/l8jjmP6.png)
