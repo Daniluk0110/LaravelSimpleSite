@@ -5,10 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Page;
 use Validator;
+use Session;
 
 class PagesEditController extends Controller
 {
     public function execute(Page $page, Request $request){
+
+        if($request->isMethod('delete')){
+           $page->delete();
+           Session::flash('status', 'Page is Deleted!' );
+           return redirect('admin');
+        }
 
         if($request->isMethod('post')){
             $input = $request->except('_token');
@@ -40,9 +47,8 @@ class PagesEditController extends Controller
             $page->fill($input);
 
             if($page->update()){
-                return redirect('admin')->with([
-                    'status', 'Page is updated!'
-                ]);
+                Session::flash('status', 'Page is updated!' );
+                return redirect('admin');
             }
         }
 

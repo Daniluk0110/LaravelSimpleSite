@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Page;
 use Validator;
+use Session;
 
 class PagesAddController extends Controller
 {
@@ -37,10 +38,8 @@ class PagesAddController extends Controller
            $page->fill($input);
 
            if($page->save()){
-
-                return redirect('admin')->with([
-                    'status', 'Page is added!'
-                ]);
+                Session::flash('status', 'Page is updated!' );
+                return redirect('admin')->with();
            }
 
        }
