@@ -44,6 +44,8 @@
   
   
   ## Admin Panel
+  Panel Admin - /admin
+  
   All Pages
   ![ScreenShot](https://i.imgur.com/SSn88Ph.png)
   

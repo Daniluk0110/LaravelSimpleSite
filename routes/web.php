@@ -52,9 +52,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
         Route::get('/', ['uses' => 'PortfolioController@execute', 'as' => 'portfolio']);
 
         //admin/portfolio/add
-        Route::match(['get', 'post'], '/add', ['uses' => 'PortfolioController@execute', 'as' => 'portfolioAdd']);
+        Route::match(['get', 'post'], '/add', ['uses' => 'PortfolioAddController@execute', 'as' => 'portfolioAdd']);
         //admin/portfolio/edit/2
-        Route::match(['get', 'post', 'delete'], '/edit/{portfolio}', ['uses' => 'PortfolioController@execute', 'as' => 'portfolioEdit']);
+        Route::match(['get', 'post', 'delete'], '/edit/{portfolio}', ['uses' => 'PortfolioEditController@execute', 'as' => 'portfolioEdit']);
     });
 
     //admin/services
