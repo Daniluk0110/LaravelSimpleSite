@@ -14,6 +14,11 @@ class IndexController extends Controller
 {
     public function execute(Request $request){
 
+
+        $p = Page::find(1);
+        $p->addToIndex();
+        Page::addAllToIndex();
+
         if($request->isMethod('post')){
             $messages = [
                 'required' => 'This :attribute field is required',

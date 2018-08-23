@@ -11,7 +11,21 @@
 |
 */
 
+use App\Page;
 
+Route::get('/search', function() {
+
+//    Page::createIndex($shards = null, $replicas = null);
+//
+//    Page::putMapping($ignoreConflicts = true);
+//
+//    Page::addAllToIndex();
+
+
+    $posts = Page::searchByQuery(['match' => ['name' => 'home']]);
+
+    return $posts;
+});
 
 Route::group([''], function (){
     Route::match(['get', 'post'], '/', ['uses' => 'IndexController@execute', 'as' => 'home']);
